@@ -15,15 +15,15 @@ class ControlSmartMirror(MycroftSkill):
 
     @intent_handler('hide.intent')
     def handle_turn_on_intent(self, message):
-        #self.log.debug("Turn on intent on entity: "+message.data.get("entity"))
-        self.speak_dialog("Turn on intent on entity: "+message.data.get("entity"))
+        self.log.debug("Turn on intent on entity: "+message.data.get("entity"))
+        self.speak_dialog("done.dialog"))
         #module = message.data.get("entity")
        
 
     @intent_handler('show.intent')
     def handle_turn_off_intent(self, message):
-         #self.log.debug("Turn of intent on entity: "+message.data.get("entity"))
-         self.speak_dialog("Turn off intent on entity: "+message.data.get("entity"))
+         self.log.debug("Turn of intent on entity: "+message.data.get("entity"))
+         self.speak_dialog("done.dialog"))
         # module = message.data.get("entity")
 
     def stop(self):
